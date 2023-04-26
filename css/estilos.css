@@ -1,0 +1,443 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
+img {
+	display: block;
+}
+
+/* MENÚ FIJO NAVEGADOR */
+
+header.menu-fijo {
+	position: fixed;
+	border-bottom: 1px solid #ccc;
+	background-color: rgba(0, 0, 0, .8);
+	height: 90px;
+	width: 100%;
+	left: 0;
+	z-index: 2;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+header.menu-fijo img {
+	width: 50px;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 30px;
+	margin-top: 10px;
+}
+
+nav ul {
+	display: flex;
+	width: 100%;
+	list-style: none;
+	column-gap: 20px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	padding: 5px 15px 10px;
+    position: relative;
+}
+
+nav a:hover {
+	color: #FFD131;
+}
+
+.ocultar-mobile {
+	display: none;
+}
+
+/* MENÚ HAMBURGUESA MOBILE */
+
+.desplegar {
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: 1px solid #FFD131;
+	border-radius: 5px;
+	width: 30px;
+	padding: 5px 5px 0;
+	cursor: pointer;
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	transition: all .5s;
+	z-index: 1;
+}
+
+.desplegar:hover {
+	background-color: #FFD131;
+}
+
+.desplegar span {
+	display: block;
+	height: 2px;
+	background-color: #FFD131;
+	margin-bottom: 5px;
+}
+
+.desplegar:hover span{
+	background-color: black;
+}
+
+.hamburguesa {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #FFD131;
+	flex-direction: column;
+	justify-content: center;
+	opacity: .8;
+	display: none;
+	z-index: 1;
+}
+
+.hamburguesa ul {
+	display: block;
+	text-align: center;
+}
+
+.hamburguesa li:not(:first-child) {
+	margin-top: 40px;
+}
+
+.hamburguesa a {
+	color: black;
+    font-size: 3em;
+    padding: 20px 40px;
+}
+
+.hamburguesa a:hover {
+	color: white;
+}
+
+.cerrar {
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.cerrar:hover {
+	color: black;
+}
+
+.desplegado {
+	display: flex;
+}
+
+.blur {
+	filter: blur(1px);
+}
+
+/* SECCIONES */
+
+section {
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+
+.base {
+	width: 60%;
+	height: 60%;
+	margin: 50px;
+}
+
+.base a{
+	color: #FFD131;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.base a:hover {
+	color: #C80F2E;
+}
+
+.base::after {
+	content: "";
+	background-color: black;
+	opacity: .3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+	color: white;
+	margin-top: 15px;
+}
+
+h2 {
+	font-size: 5.5em;
+	font-weight: 700;
+	text-align: right;
+	color: white;
+	margin-top: 50px;
+}
+
+h3 {
+	color: white;
+	font-size: 1.2em;
+}
+
+p {
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	margin-top:30px;
+}
+
+/* SECCIÓN HOME*/
+
+#uno {
+	background: url("../img/mat-fondo3.jpg") no-repeat center top / cover;
+}
+
+#uno img {
+	margin-top: 100px;
+	width: 30vh;
+}
+
+.cuadrado {
+	width: 150px;
+	margin: 50px auto;
+	position: relative;
+}
+
+.negro {
+	background-color: none;
+	position: fixed;
+	top: 100px;
+	right: 150px;
+	width: 450px;
+	height: 450px;
+}
+
+.boton {
+	width: 150px;
+	margin: 10px auto;
+	position: relative;
+}
+
+.amarillo {
+	background-color: #FFD131;
+	position: fixed;
+	bottom: 40px;
+	left: 50px;
+	width: 10px;
+	height: 35px;
+}
+
+.amarillo a {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	padding: 15px 15px 10px;
+    position: relative;
+}
+
+.amarillo a:hover {
+	color: #FFD131;
+}
+
+/* SECCIÓN SPORTS*/
+
+#dos{
+	background: url("../img/mat-train.jpg") no-repeat center top / cover;
+}
+
+.sports {
+	width: 30%;
+	height: 45%;
+	margin: 40px;
+	border: 5px solid white;
+	top: 120px;
+	background-color: black;
+	opacity: .7;
+	text-align: center;
+	align-items: center;
+	position: absolute;
+}
+
+.sports h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+	color: white;
+	margin-top: 40px;
+}
+
+.sports p {
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	margin-bottom: 70px;
+	position: absolute;
+	margin: 20px;
+}
+
+.galeria-desktop {
+	display: grid;
+	grid-template: repeat(3, 20%) / repeat(2, 30%);
+	gap: 60px;
+	column-gap: 20px;
+	width: 90%;
+	justify-content: right;
+	margin: 70px 45px;
+
+}
+
+.galeria-desktop img {
+	display: block;
+	filter: grayscale(90%);
+	transition: filter 1s;
+	cursor: pointer;
+	object-fit: cover;
+	width: 70%;
+	margin: 80px 0 0;
+	padding: 10px;
+	background-color: #FFD131;
+	box-shadow: 8px 8px 8px black;
+}
+
+.galeria-desktop img:hover {
+	filter: grayscale(0);
+}
+
+/* SECCIÓN PROGRAMS*/
+
+#tres{
+	padding-bottom: 50px;
+}
+
+#tres{
+	background: url("../img/mat-fondo4.jpg") no-repeat center top / cover;
+}
+
+#tres div:last-child img {
+	border: 5px solid #FFD131;
+	padding: 10px;
+	margin-top: 90px;
+	max-width: 120%;
+	max-height: 120%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: all .5s;
+}
+
+#tres div:last-child p {
+	font-size: 1.5em;
+	color: white;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+#tres div:last-child a:hover img {
+	filter: grayscale(0);
+}
+
+/* CONDICIONALES */
+
+@media screen and (min-width:760px) {
+	#tres div:last-child {
+		display: grid;
+		grid-template: 20px / repeat(3, 50%);
+		height: 55vh;
+		column-gap: 10px;
+		align-items: start;
+	}
+	#tres div:last-child img {
+		height: 80%;
+		margin-bottom: 60%;
+
+	}
+	#tres div:last-child :nth-child(odd) {
+		grid-row: 3 / 3;
+	}
+	#tres div:last-child p {
+		margin-top: 70px;
+	}
+	#dos div:first-child {
+		height: 30%;
+		width: 30%;
+	}
+	.sports p {
+		display: grid;
+	}
+	.galeria-desktop {
+		gap: 20px;
+	}
+}
+
+@media screen and (min-width:1400px) {
+	header.menu-fijo {
+		display: flex;
+	}
+	nav {
+		width: 70%;
+	}
+	header.menu-responsive {
+		display: none;
+	}
+	section {
+		width: 100%;
+		padding: 0;
+		position: fixed;
+		height: 100vh;
+		display: grid;
+		grid-template: repeat(2, 1fr) / 100%;
+		align-items: center;
+	}
+	#uno, #dos:target, #tres:target {
+		z-index: 1;
+	}
+	#dos div:first-child {
+		height: 70%;
+	}
+	.base {
+		width: 60%;
+	}
+	.ocultar-mobile {
+		display: grid;
+	}
+}
